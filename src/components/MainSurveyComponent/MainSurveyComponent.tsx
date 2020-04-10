@@ -6,6 +6,7 @@ import CustomDropDown from "../custom/CustomDropDown/CustomDropDown";
 import CustomQuestionWithRadioOption from "../custom/CustomQuestionWithRadioOption/CustomQuestionWithRadioOption";
 import CustomQuestionWithCheckBoxOption from "../custom/CustomQuestionWithCheckBox/CustomQuestionWithCheckBox";
 import CustomLabel from "../custom/CustomLabel/CustomLabel";
+import CustomButton from "../custom/CustomButton/CustomButton";
 
 const recommendationOption = ["Definitely", "MayBe", "Not Sure"];
 
@@ -38,9 +39,10 @@ const MainSurveyComponent = () => {
                         return (
                             <form onSubmit={formikProps.handleSubmit} onReset={formikProps.handleReset}
                                   className="form">
-                                <CustomFormField fieldName={"name"} labelText={"Name"}/>
-                                <CustomFormField fieldName={"email"} labelText={"Email"}/>
-                                <CustomFormField fieldName={"age"} labelText={"Age (Optional)"}/>
+                                <CustomFormField placeHolder={"Enter Your Name"} fieldName={"name"} labelText={"Name"}/>
+                                <CustomFormField placeHolder={"Enter Your Email"} fieldName={"email"}
+                                                 labelText={"Email"}/>
+                                <CustomFormField placeHolder={"Age"} fieldName={"age"} labelText={"Age (Optional)"}/>
                                 <CustomDropDown fieldName={"current-role"} options={currentRoleOption}
                                                 labelText={"Which option best describes your current role?"}/>
                                 <CustomQuestionWithRadioOption label={"Would you recommend freeCodeCamp to a friend?"}
@@ -49,7 +51,11 @@ const MainSurveyComponent = () => {
                                                 labelText={"What is your favorite feature of freeCodeCamp?"}/>
                                 <CustomQuestionWithCheckBoxOption options={improvementOption}
                                                                   label={"What would you like to see improved? (Check all that apply)"}/>
-                                <CustomFormField labelText={"Any comments or suggestions?"} fieldName={"comment"}/>
+                                <CustomFormField placeHolder={"Enter Your Comment Here"}
+                                                 labelText={"Any comments or suggestions?"} height={"6rem"}
+                                                 fieldName={"comment"}/>
+
+                                <CustomButton text={"Submit"} color={"white"} backgroundColor={"green"}/>
                             </form>
                         );
                     }}

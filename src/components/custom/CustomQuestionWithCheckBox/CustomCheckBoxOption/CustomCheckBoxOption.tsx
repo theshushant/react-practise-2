@@ -10,7 +10,7 @@ interface Props {
 
 const CustomCheckBoxOption: React.FC<Props> = (props: Props) => {
     return (<div className={"custom-checkbox-button"}>
-        <Field type={"checkbox"} value={props.optionValue ? props.optionValue : props.option}
+        <Field type={"checkbox"} className = {"check-box"} value={props.optionValue ? props.optionValue : props.option}
                name={props.fieldName ? props.fieldName : props.option}/>
         <p>
             {props.option}

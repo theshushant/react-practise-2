@@ -46,6 +46,6 @@ const TestSuite: React.FC<Props> = (props: Props) => {
 };
 
 const UrlLink = (props: { text: string }) => {
-    return <a className={"link"}>{props.text}</a>;
+    return <a href={"#"} className={"link"}>{props.text}</a>;
 };
 export default TestSuite;
