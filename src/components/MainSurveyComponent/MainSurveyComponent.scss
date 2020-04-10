@@ -1,15 +1,19 @@
 .main-survey-component {
-  width: 35vw;
+  width: 30vw;
   position: relative;
   left: 40rem;
-  padding-top: 2rem;
+  padding-top: 7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.comment-section {
+  margin: 1rem;
+}
+
 .main-survey-component-form {
   margin-top: 2rem;
-  background-color: violet;
+  background-color: rgb(42, 16, 70);
   padding: 2rem;
 }

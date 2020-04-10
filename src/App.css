@@ -1,16 +1,17 @@
 .App {
-    background-image: url(../src/assets/xyz.jpg);
-    background-repeat: no-repeat;
+    background: linear-gradient(rgba(0, 0, 150, 0.4) 100%,
+    rgba(0, 0, 0, 1) 100%),
+    url(../src/assets/xyz.jpeg) no-repeat fixed;
     background-size: cover;
-    background-attachment: fixed;
+    opacity: 0.8;
 }
 
 .survey-label {
-    float: right;
+    font-size: 0.8rem;
     background-color: cornsilk;
-    padding: 0.5rem;
-    color: red;
+    padding: 0 0.3rem;
+    border-radius: 0.4rem;
     position: fixed;
     right: 1rem;
-    top: 1rem;
+    top: 5rem;
 }

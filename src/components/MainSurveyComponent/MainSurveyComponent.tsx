@@ -20,8 +20,13 @@ const improvementOption = ["Front-end ", "Back-end", "Data Visualization", "Chal
 const MainSurveyComponent = () => {
     return (
         <div className={"main-survey-component"}>
-            <CustomLabel labelText={"freeCodeCamp Survey Form"} fonSize={"1.8rem"}/>
-            <CustomLabel labelText={"Thank you for taking the time to help us improve the platform"}/>
+            <CustomLabel
+                labelText={"freeCodeCamp Survey Form"}
+                fonSize={"1.8rem"}
+            />
+            <CustomLabel
+                labelText={"Thank you for taking the time to help us improve the platform"}
+            />
             <div className={"main-survey-component-form"}>
                 <Formik
                     initialValues={{
@@ -39,23 +44,41 @@ const MainSurveyComponent = () => {
                         return (
                             <form onSubmit={formikProps.handleSubmit} onReset={formikProps.handleReset}
                                   className="form">
-                                <CustomFormField placeHolder={"Enter Your Name"} fieldName={"name"} labelText={"Name"}/>
-                                <CustomFormField placeHolder={"Enter Your Email"} fieldName={"email"}
-                                                 labelText={"Email"}/>
-                                <CustomFormField placeHolder={"Age"} fieldName={"age"} labelText={"Age (Optional)"}/>
-                                <CustomDropDown fieldName={"current-role"} options={currentRoleOption}
-                                                labelText={"Which option best describes your current role?"}/>
-                                <CustomQuestionWithRadioOption label={"Would you recommend freeCodeCamp to a friend?"}
-                                                               options={recommendationOption}/>
-                                <CustomDropDown fieldName={"favourite-feature"} options={favouriteFeatureOption}
-                                                labelText={"What is your favorite feature of freeCodeCamp?"}/>
-                                <CustomQuestionWithCheckBoxOption options={improvementOption}
-                                                                  label={"What would you like to see improved? (Check all that apply)"}/>
-                                <CustomFormField placeHolder={"Enter Your Comment Here"}
-                                                 labelText={"Any comments or suggestions?"} height={"6rem"}
-                                                 fieldName={"comment"}/>
+                                <CustomFormField
+                                    placeHolder={"Enter Your Name"}
+                                    fieldName={"name"}
+                                    labelText={"Name"}/>
+                                <CustomFormField
+                                    placeHolder={"Enter Your Email"}
+                                    fieldName={"email"}
+                                    labelText={"Email"}/>
+                                <CustomFormField
+                                    placeHolder={"Age"}
+                                    fieldName={"age"}
+                                    labelText={"Age (Optional)"}/>
+                                <CustomDropDown
+                                    fieldName={"current-role"}
+                                    options={currentRoleOption}
+                                    labelText={"Which option best describes your current role?"}/>
+                                <CustomQuestionWithRadioOption
+                                    label={"Would you recommend freeCodeCamp to a friend?"}
+                                    options={recommendationOption}/>
+                                <CustomDropDown
+                                    fieldName={"favourite-feature"}
+                                    options={favouriteFeatureOption}
+                                    labelText={"What is your favorite feature of freeCodeCamp?"}/>
+                                <CustomQuestionWithCheckBoxOption
+                                    options={improvementOption}
+                                    label={"What would you like to see improved? (Check all that apply)"}/>
 
-                                <CustomButton text={"Submit"} color={"white"} backgroundColor={"green"}/>
+
+                                <CommentSection/>
+
+                                <CustomButton
+                                    text={"Submit"}
+                                    color={"white"}
+                                    backgroundColor={"green"}
+                                    width={"41rem"}/>
                             </form>
                         );
                     }}
@@ -66,4 +89,11 @@ const MainSurveyComponent = () => {
     );
 };
 
+const CommentSection = () => {
+    return (<div className={"comment-section"}>
+        <CustomLabel labelText={"Any comments or suggestions?"}/>
+
+        <textarea cols={80} rows={15} style={{resize: "vertical"}} placeholder={"Enter Your Comment here"}/>
+    </div>);
+};
 export default MainSurveyComponent;

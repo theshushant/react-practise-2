@@ -1,19 +1,29 @@
 .test-suite {
-  background-color: rebeccapurple;
+  background-color: cornsilk;
   position: fixed;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
+  top: 4rem;
+}
+
+.icon-position{
+
 }
 
 .test-suite-form-options {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 1rem 0;
+  //margin: 1rem 0;
 }
 
 .link {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.test-suite-links {
+  display: flex;
+  justify-content: space-between;
 }
 
 .link:hover {

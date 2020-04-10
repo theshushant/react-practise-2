@@ -2,13 +2,15 @@ import React from 'react';
 import './App.css';
 import MainSurveyComponent from "./components/MainSurveyComponent/MainSurveyComponent";
 import TestSuite from "./components/TestSuite/TestSuite";
+import HeaderComponent from "./components/HeaderComponent/HeaderComponent";
 
 function App() {
     return (
         <div className="App">
-            <TestSuite/>
+            {/*<TestSuite/>*/}
             <SurveyLabel/>
             <MainSurveyComponent/>
+            <HeaderComponent/>
         </div>
     );
 }

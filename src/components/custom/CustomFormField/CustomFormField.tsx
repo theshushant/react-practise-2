@@ -15,8 +15,11 @@ const CustomFormField: React.FC<Props> = (props: Props) => {
     return (
         <div className={"custom-form-field"}>
             <CustomLabel labelText={props.labelText}/>
-            <Field placeholder={props.placeHolder ? props.placeHolder : "Enter The Text Here"} className={"form-field"}
-                   style={{height: props.height ? props.height : "auto"}} name={props.fieldName}/>
+            <Field
+                placeholder={props.placeHolder ? props.placeHolder : "Enter The Text Here"}
+                className={"form-field"}
+                style={{height: props.height ? props.height : "auto"}}
+                name={props.fieldName}/>
         </div>
     );
 };
