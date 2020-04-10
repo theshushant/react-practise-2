@@ -7,7 +7,7 @@ import HeaderComponent from "./components/HeaderComponent/HeaderComponent";
 function App() {
     return (
         <div className="App">
-            {/*<TestSuite/>*/}
+            <TestSuite/>
             <SurveyLabel/>
             <MainSurveyComponent/>
             <HeaderComponent/>

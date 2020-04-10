@@ -3,6 +3,7 @@ import './TestSuite.scss';
 import {Field, Formik} from "formik";
 import CustomDropDown from "../custom/CustomDropDown/CustomDropDown";
 import CustomButton from "../custom/CustomButton/CustomButton";
+import CustomColoredBoxWithText from "../CustomColoredBoxText/CustomColoredBoxWithText";
 
 interface Props {
 
@@ -40,20 +41,41 @@ const TestSuite: React.FC<Props> = (props: Props) => {
                                 labelColor={"black"}
                             />
 
-                            {/*<div className={"test-suite-form-options"}>*/}
-                            {/*    <CustomButton*/}
-                            {/*        backgroundColor={"Black"}*/}
-                            {/*        color={"white"}*/}
-                            {/*        text={"Run Text"}/>*/}
-                                <CustomButton
-                                    backgroundColor={"Grey"}
-                                    color={"white"}
-                                    text={"Tests"}/>
-                            {/*</div>*/}
-                            {/*<div className={"test-suite-links"}>*/}
-                            {/*    <UrlLink text={"Ask For Help"}/>*/}
-                            {/*    <UrlLink text={"Report Bug"}/>*/}
-                            {/*</div>*/}
+                            <div className={"test-details"}>
+                                <div className={"test-suite-form-options"}>
+                                    <CustomButton
+                                        backgroundColor={"Black"}
+                                        color={"white"}
+                                        text={"Run Text"}
+                                    width={"8rem"}
+                                    />
+                                    <CustomButton
+                                        backgroundColor={"Grey"}
+                                        color={"white"}
+                                        width={"8rem"}
+                                        text={"Tests"}/>
+                                </div>
+
+                                <div className={"test-information"}>
+                                    <CustomColoredBoxWithText
+                                        backgroundColor={"red"}
+                                        text={" Test(s) Failed"}/>
+
+                                    <CustomColoredBoxWithText
+                                        backgroundColor={"green"}
+                                        text={"Tests Passed"}/>
+
+                                    <CustomColoredBoxWithText
+                                        backgroundColor={"orange"}
+                                        text={"Tests Executing"}/>
+                                </div>
+                            </div>
+                            <div className={"test-suite-links"}>
+                                <UrlLink text={"Ask For Help"}/>
+                                <UrlLink text={"Report Bug"}/>
+                            </div>
+
+
                         </form>
                     );
                 }}
